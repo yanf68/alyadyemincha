@@ -1,123 +1,151 @@
-# Create the HTML content for the combined, accessible site
-html_content = """
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>על יד ימינך - תפריט</title>
+  <title>האתר שלי</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    .accessibility-toolbar {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 8px;
-      border-radius: 6px;
-      z-index: 999;
-    }
-    .accessibility-toolbar button {
-      margin: 5px 3px;
-      padding: 5px 10px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .contrast {
-      background-color: #000 !important;
-      color: #fff !important;
-    }
-    .header {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
-    }
-    .header h1 {
+      line-height: 1.6;
+      background-color: white;
+      color: black;
+      direction: rtl;
       margin: 0;
-      font-size: 28px;
+      padding: 0;
     }
-    .menu-container {
-      max-width: 700px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .menu-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .contact {
-      margin-top: 20px;
-      font-size: 16px;
-      text-align: center;
-    }
-    .whatsapp-button {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #25D366;
+
+    header, footer {
+      background-color: #333;
       color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    footer {
+      padding: 1rem;
       text-align: center;
-      font-size: 14px;
-      margin-top: 30px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    a {
+      color: #0099cc;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    #accessibility-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #000;
+      color: #fff;
       padding: 10px;
+      border: none;
+      z-index: 999;
+      cursor: pointer;
+    }
+
+    #accessibility-menu {
+      position: fixed;
+      bottom: 70px;
+      left: 20px;
+      background: #fff;
+      border: 1px solid #000;
+      padding: 10px;
+      z-index: 1000;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .high-contrast {
+      background-color: black !important;
+      color: yellow !important;
+    }
+
+    .large-font {
+      font-size: 1.5em !important;
+    }
+
+    #accessibility-statement {
+      display: none;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="accessibility-toolbar">
-    <button onclick="increaseFontSize()">הגדל טקסט</button>
-    <button onclick="toggleContrast()">ניגודיות</button>
-  </div>
+  <header>
+    <h1>ברוכים הבאים לאתר</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">אודות</a></li>
+        <li><a href="#services">שירותים</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+        <li><a href="#" id="accessibility-statement-link">הצהרת נגישות</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="header">
-    <h1>על יד ימינך</h1>
-  </div>
+  <main>
+    <section id="about">
+      <h2>אודות</h2>
+      <p>זוהי דוגמה לאתר אישי פשוט עם נגישות מלאה, ללא כפתור WhatsApp.</p>
+    </section>
 
-  <div class="menu-container">
-    <img src="menu.jpg" alt="תפריט של מסעדת על יד ימינך" />
-    <div class="contact">
-      <p><strong>כתובת:</strong> בקעת הרימון 1, מרכז מסחרי, שכונת אגמים</p>
-      <p><strong>ימי שישי:</strong> סלטי הבית + דגים.<br>ניתן להזמין ולאסוף: שניצל בחלה, פרגית, פרנה, קציצות דגים.</p>
-      <a class="whatsapp-button" href="https://wa.me/" target="_blank">שלח הודעה ב-WhatsApp</a>
+    <section id="services">
+      <h2>השירותים שלי</h2>
+      <ul>
+        <li>שירות 1</li>
+        <li>שירות 2</li>
+        <li>שירות 3</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>צור קשר</h2>
+      <p>טלפון: <a href="tel:0500000000">050-0000000</a></p>
+      <p>מייל: <a href="mailto:example@email.com">example@email.com</a></p>
+    </section>
+
+    <div id="accessibility-statement">
+      <h3>הצהרת נגישות</h3>
+      <p>האתר הזה נגיש לכלל המשתמשים ומספק מגוון כלים המותאמים לאנשים עם מוגבלויות.</p>
+      <p>תוסף הנגישות הפועל באתר: Nagishli, המאפשר הגדלת טקסט, ניגודיות גבוהה ועוד.</p>
+      <p>אם נתקלתם בבעיה או שאתם זקוקים לעזרה נוספת, אתם מוזמנים לפנות אלינו בכתובת האימייל: <a href="mailto:support@email.com">support@email.com</a>.</p>
+      <p>תאריך עדכון: מאי 2025</p>
     </div>
-  </div>
+  </main>
 
   <footer>
-    <p>האתר מונגש בהתאם לתקן WCAG 2.0 AA</p>
-    <p>לשאלות בנושא נגישות – צרו קשר בטלפון או WhatsApp</p>
+    <p>© כל הזכויות שמורות</p>
   </footer>
 
+  <!-- תוסף נגישות Nagishli -->
   <script>
-    function increaseFontSize() {
-      document.body.style.fontSize = 'larger';
-    }
-    function toggleContrast() {
-      document.body.classList.toggle('contrast');
-    }
+    (function() {
+      var s = document.createElement("script");
+      s.src = "https://cdn.jsdelivr.net/gh/nagishli/nagishli@latest/dist/nagishli.min.js";
+      s.onload = function() {
+        window.Nagishli.init({
+          position: 'left', // מיקום התפריט: שמאל
+          language: 'he'    // שפה עברית
+        });
+      };
+      document.head.appendChild(s);
+    })();
+
+    // הצגת הצהרת נגישות
+    document.getElementById("accessibility-statement-link").addEventListener("click", function() {
+      var statement = document.getElementById("accessibility-statement");
+      statement.style.display = (statement.style.display === "block") ? "none" : "block";
+    });
   </script>
 </body>
 </html>
-"""
-
-# Save the HTML file
-html_path = "/mnt/data/index.html"
-with open(html_path, "w", encoding="utf-8") as file:
-    file.write(html_content)
-
-html_path
