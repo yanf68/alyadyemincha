@@ -4,41 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>האתר שלי</title>
+  <link rel="stylesheet" href="styles.css" /> <!-- כאן אתה יכול לשמור את העיצוב הקיים שלך -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: white;
-      color: black;
-      direction: rtl;
-      margin: 0;
-      padding: 0;
-    }
-
-    header, footer {
-      background-color: #333;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    a {
-      color: #0099cc;
-      text-decoration: none;
-    }
-
-    main {
-      padding: 2rem;
-    }
-
+    /* הוספתי רק את החלקים שמדברים על הנגישות */
     #accessibility-btn {
       position: fixed;
       bottom: 20px;
@@ -82,6 +50,7 @@
 </head>
 <body>
   <header>
+    <!-- כותרת ותפריט האתר שלך -->
     <h1>ברוכים הבאים לאתר</h1>
     <nav>
       <ul>
@@ -94,9 +63,10 @@
   </header>
 
   <main>
+    <!-- תוכן האתר שלך -->
     <section id="about">
       <h2>אודות</h2>
-      <p>זוהי דוגמה לאתר אישי פשוט עם נגישות מלאה, ללא כפתור WhatsApp.</p>
+      <p>זוהי דוגמה לאתר אישי עם נגישות מלאה, שמוסיף כפתור נגישות להגדלת טקסט וניגודיות גבוהה.</p>
     </section>
 
     <section id="services">
@@ -126,6 +96,9 @@
   <footer>
     <p>© כל הזכויות שמורות</p>
   </footer>
+
+  <!-- כפתור להצהרת נגישות -->
+  <button id="accessibility-btn">הצהרת נגישות</button>
 
   <!-- תוסף נגישות Nagishli -->
   <script>
