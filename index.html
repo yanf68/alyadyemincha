@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>על יד ימינך - תפריט</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .accessibility-toolbar {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 8px;
+      border-radius: 6px;
+      z-index: 999;
+    }
+    .accessibility-toolbar button {
+      margin: 5px 3px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .contrast {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+    .header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .menu-container {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .menu-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .contact {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: center;
+    }
+    .whatsapp-button {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 30px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="accessibility-toolbar">
+    <button onclick="increaseFontSize()">הגדל טקסט</button>
+    <button onclick="toggleContrast()">ניגודיות</button>
+  </div>
+
+  <div class="header">
+    <h1>על יד ימינך</h1>
+  </div>
+
+  <div class="menu-container">
+    <img src="menu.jpg" alt="תפריט של מסעדת על יד ימינך" />
+    <div class="contact">
+      <p><strong>כתובת:</strong> בקעת הרימון 1, מרכז מסחרי, שכונת אגמים</p>
+      <p><strong>ימי שישי:</strong> סלטי הבית + דגים.<br>ניתן להזמין ולאסוף: שניצל בחלה, פרגית, פרנה, קציצות דגים.</p>
+      <a class="whatsapp-button" href="https://wa.me/" target="_blank">שלח הודעה ב-WhatsApp</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>האתר מונגש בהתאם לתקן WCAG 2.0 AA</p>
+    <p>לשאלות בנושא נגישות – צרו קשר בטלפון או WhatsApp</p>
+  </footer>
+
+  <script>
+    function increaseFontSize() {
+      document.body.style.fontSize = 'larger';
+    }
+    function toggleContrast() {
+      document.body.classList.toggle('contrast');
+    }
+  </script>
+</body>
+</html>
